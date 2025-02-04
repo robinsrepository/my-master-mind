@@ -1,11 +1,72 @@
+.big-screen {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: hsl(35, 25%, 60%);
+}
+
 /* PC, laptop, tablet */
+.container {
+    display: flex;
+    height: 100svh;
+}
 
+.cover {
+    flex: 1;
+    background-color: rgb(0, 0, 0);
+    margin: 5px 2px 6px 5px;
+}
 
+.start-game {
+    display: none;
+}
 
+.game {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.gameboard {
+    flex: 3;
+    background-color: #813921;
+    margin: 5px 6px 2px 5px;
+}
+
+.pins {
+    flex: 1;
+    background-color: hsl(35, 25%, 40%);
+    margin: 3px 6px 6px 5px; /* 3px on top to prevent margin collapse */
+}
 
 /* smartphone */
 @media (max-width: 768px) {
+    .small-screen {
+        background-color: #813921;
+    }
+
     .container {
         flex-direction: column;
     }
+
+    .start-game {
+        display: flex;
+        height: 98vh;
+    }
+
+    .big-cover {
+        display: none;
+    }
+
+    .game {
+        flex: 3;
+        display: none;
+    }
+
+    .pins {
+        flex: 1;
+    }
 }
+
+/* Je ging nu het scrollen bij de phone versie fixen */
+/* Let op! Als je geklikt hebt op de link voor het spel in de telefoon, dan klopt de lay out voor de pc versie natuurlijk niet, omdat je dan op een andere pagina bent */
