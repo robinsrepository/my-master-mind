@@ -2,19 +2,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: hsl(35, 25%, 60%);
+    background-color: #000;
 }
 
 /* PC, laptop, tablet */
 .container {
     display: flex;
-    height: 100svh;
+    height: 99svh;
+    max-width: 900px;
+    margin: auto;
+    border: solid 6px hsl(35, 25%, 70%);
+    background-color: hsl(35, 25%, 80%);;
 }
 
 .cover {
     flex: 1;
-    background-color: rgb(0, 0, 0);
+    background-color: #060D15;
     margin: 5px 2px 6px 5px;
+    background-image: url('cover.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .start-game {
@@ -30,13 +38,13 @@
 .gameboard {
     flex: 3;
     background-color: #813921;
-    margin: 5px 6px 2px 5px;
+    margin: 5px 6px 3px 5px;
 }
 
 .pins {
     flex: 1;
     background-color: hsl(35, 25%, 40%);
-    margin: 3px 6px 6px 5px; /* 3px on top to prevent margin collapse */
+    margin: 4px 6px 6px 5px; /* 3px on top to prevent margin collapse */
 }
 
 /* smartphone */
