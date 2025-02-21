@@ -15,7 +15,7 @@ body {
     height: 700px;
     max-width: 580px; /* perfect img width on 100% zoom */
     max-height: 660px; /* perfect img height on 100% zoom */
-    background-color: #d9cebfcc;
+    background: linear-gradient(90deg, rgba(199, 178, 145, 1) 0%, rgba(187, 170, 143, 1) 35%, rgba(217, 207, 191, 1) 100%);
     border-radius: 0.5rem;
 }
 
@@ -28,7 +28,7 @@ body {
     width: 100%;
     height: 98.5%;
     background-repeat: no-repeat;
-    border-radius: 0.5rem;
+    border-radius: 0.3rem;
 }
 
 .start-game {
@@ -43,16 +43,19 @@ body {
 
 .gameboard {
     flex: 3;
-    background-color: #813921;
+    /* background-color: #813921;
+     */
+    background-image: url('gameboard.jpg');
     margin: 5px 6px 3px 5px;
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
 }
 
 .pins {
     flex: 1;
-    background-color: #806a4d;
+    background-image: url('pinbottom.jpg');
     margin: 3px 6px 6px 5px;
-    border-radius: 0.5rem;
+    border-radius: 0.3rem;
+    box-shadow: inset 0 0 10px #ae946e;
 }
 
 /* smartphone */
