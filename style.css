@@ -57,13 +57,6 @@ body {
 
 /* smartphone */
 @media (max-width: 500px) {
-    .big-screen {
-        background-color: #04001a;
-    }
-
-    .small-screen {
-        background-color: #060D15;
-    }
 
     .container {
         flex-direction: column;
