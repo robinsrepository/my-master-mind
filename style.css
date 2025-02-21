@@ -1,18 +1,20 @@
-.big-screen {
-    margin: auto;
-    padding: 0;
-    box-sizing: border-box;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    min-height: 100vh; /* nesaccary for centering vertically */
     background-color: #04001a;
+    box-sizing: border-box;
+    margin: 0;
 }
 
-/* PC, laptop, tablet */
+/* PC, laptop */
 .container {
     display: flex;
-    height: 100svh;
-    max-width: 780px;
-    max-height: 900px;
-    width: 100%;
-    margin: auto;
+    width:700px;
+    height: 700px;
+    max-width: 580px; /* perfect img width on 100% zoom */
+    max-height: 660px; /* perfect img height on 100% zoom */
     background-color: #d9cebfcc;
     border-radius: 0.5rem;
 }
@@ -22,8 +24,9 @@
     background-color: #060D15;
     margin: 5px 2px 6px 5px;
     background-image: url('cover.jpg');
-    background-size: contain;
-    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 98.5%;
     background-repeat: no-repeat;
     border-radius: 0.5rem;
 }
@@ -48,15 +51,14 @@
 .pins {
     flex: 1;
     background-color: #806a4d;
-    margin: 4px 6px 6px 5px;
-    /* 3px on top to prevent margin collapse */
+    margin: 3px 6px 6px 5px;
     border-radius: 0.5rem;
 }
 
 /* smartphone */
-@media (max-width: 768px) {
+@media (max-width: 500px) {
     .big-screen {
-        background-color: #d9cebfcc;
+        background-color: #04001a;
     }
 
     .small-screen {
@@ -65,18 +67,17 @@
 
     .container {
         flex-direction: column;
-        border: solid 6px #c6b69f99;
-        margin: auto;
-        box-sizing: border-box;
+        max-width: 310px;
+        max-height: 700px;
+    }
+
+    .cover {
+        width: 97%;
     }
 
     .start-game {
         display: flex;
         height: 98vh;
-    }
-
-    .big-cover {
-        display: none;
     }
 
     .game {
@@ -86,6 +87,5 @@
 
     .pins {
         flex: 1;
-        border-top: 4px solid #c6b69f99;
     }
 }
